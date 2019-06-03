@@ -1,0 +1,181 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 62.5%;
+}
+a{
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    color: inherit;
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c6d9d3;
+}
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+header .overlay h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 9rem;
+    text-shadow: 25px -15px rgba(25, 42, 46, 0.04);
+    color: #142124;
+    mix-blend-mode: overlay;
+}
+header .overlay h1 span {
+    margin-top: -1.5em;
+    padding-top: 0.5em;
+    display: block;
+    letter-spacing: 5px;
+    font-size: 1.25rem;
+}
+header .parallax {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+header .parallax div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header .parallax .one {
+    background-image: url("../svg/mountains-1.svg");
+    z-index: 4;
+}
+header .parallax .two {
+    background-image: url("../svg/mountains-2.svg");
+    z-index: 3;
+}
+header .parallax .three {
+    background-image: url("../svg/mountains-3.svg");
+    z-index: 2;
+}
+header .parallax .four {
+    background-image: url("../svg/mountains-4.svg");
+    z-index: 1;
+}
+header .parallax .five {
+    background-image: url("../svg/mountains-5.svg");
+    z-index: 0;
+}
+
+main {
+    position: relative;
+    margin-bottom: 15vh;
+    padding: 2em 3em;
+    min-height: 85vh;
+    background-color: #e8f4f8;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: flex;
+    min-height: 15vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    background-color: #192a2e;
+    color: #c6d9d3;
+}
+footer a {
+    padding-bottom: .25em;
+    text-decoration: none;
+    border-bottom: 1px dashed #c6d9d3;
+    color: #c6d9d3;
+}
+footer a:hover {
+    border-bottom-color: transparent !important;
+    color: #ffffff;
+}
+footer .copyright li:first-child {
+    border-left: 0;
+    margin-left: 0;
+    padding: 0;
+}
+footer .copyright{
+    font-size: 0.8em;
+    list-style: none;
+    padding: 0;
+}
+footer .copyright li {
+    border-left: solid 1px;
+    display: inline-block;
+    line-height: 1em;
+    margin-left: 1em;
+    padding: 0 0 0 1em;
+}
+
+body,html{
+    margin: 0;
+    height: 100%;
+}
+
+.box {
+    margin: 0 0;
+    overflow: hidden;
+    height: 90vh;
+    width:100%;
+}
+
+#board {
+    float: left;
+    width: 70%;
+    height: 100%;
+    left:15px;
+}
+.input {
+    float: left;
+    width: 30%;
+    border: 0;
+    height: 100%;
+}
+#html{
+    resize: none;
+    height: 100%;
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #333;
+    color: #eee;
+    font-family: Consolas,sans-serif;
+    font-size: 16px;
+    box-sizing:border-box;
+    padding: 10px;
+    line-height: 20px;
+}
