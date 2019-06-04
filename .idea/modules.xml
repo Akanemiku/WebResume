@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/startbootstrap-resume-master.iml" filepath="$PROJECT_DIR$/.idea/startbootstrap-resume-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/WebResume.iml" filepath="$PROJECT_DIR$/.idea/WebResume.iml" />
     </modules>
   </component>
 </project>
