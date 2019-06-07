@@ -25,7 +25,7 @@ function load() {
         xAxis: {
             type: 'category',
             name: '学期',
-            data: [],
+            data: ["大一第一学期","大一第二学期","大一第二学期"],
             axisLabel:{
                 interval:0
             },
@@ -56,38 +56,8 @@ function load() {
                     },
                 }
             },
-            data: []
+            data: [12,3,1]
         }]
-    });
-
-
-    myChart.showLoading();
-    var names = [];
-    var nums = [];
-    $.ajax({
-        type: 'get',
-        url: 'json/data5.json',
-        dataType: "json",
-        success: function (result) {
-            $.each(result.list, function (index, item) {
-                names.push(item.semester);
-                nums.push(item.rank);
-            });
-            myChart.hideLoading();
-            myChart.setOption({
-                xAxis: {
-                    data: names
-                },
-                series: [{
-                    name: '排名',
-                    data: nums
-                }]
-            });
-        },
-        error: function (errorMsg) {
-            alert("Request failure!");
-            myChart.hideLoading();
-        }
     });
 }
 load();

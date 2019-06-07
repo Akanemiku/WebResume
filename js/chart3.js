@@ -26,7 +26,7 @@ function load() {
         xAxis: {
             type: 'category',
             name: '科目',
-            data: [],
+            data: ["木球俱乐部3","概率论与数理统计","C++程序设计","计算机网络","离散数学", "数据库系统原理","Java高级编程","Python程序设计","思想道德修养与法律基础（实践）","毛泽东思想和中国特色社会主义理论体系概论(理论)"],
             axisPointer: {
                 type: 'shadow'
             },
@@ -68,47 +68,8 @@ function load() {
                     }
                 }
             },
-            data: []
+            data: [91,89,97,92,93,88,85,95,89,91]
         }]
     });
-
-
-    myChart.showLoading();    //数据加载完之前先显示一段简单的loading动画
-
-
-    var names = [];    //类别数组（实际用来盛放X轴坐标值）
-    var nums = [];    //销量数组（实际用来盛放Y坐标值）
-
-
-    $.ajax({
-        type: 'get',
-        url: 'json/data3.json',//请求数据的地址
-        dataType: "json",        //返回数据形式为json
-        success: function (result) {
-            //请求成功时执行该函数内容，result即为服务器返回的json对象
-            $.each(result.list, function (index, item) {
-                names.push(item.class_name);    //挨个取出类别并填入类别数组                    
-                nums.push(item.score);    //挨个取出销量并填入销量数组
-            });
-
-
-            myChart.hideLoading();    //隐藏加载动画
-            myChart.setOption({        //加载数据图表
-                xAxis: {
-                    data: names
-                },
-                series: [{
-                    // 根据名字对应到相应的系列
-                    name: '分数',  //显示在上部的标题
-                    data: nums
-                }]
-            });
-        },
-        error: function (errorMsg) {
-            //请求失败时执行该函数
-            alert("Request failure!");
-            myChart.hideLoading();
-        }
-    });
-};
+}
 load();
