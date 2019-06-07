@@ -106,7 +106,7 @@ function load() {
         },
         error: function (errorMsg) {
             //请求失败时执行该函数
-            alert("图表请求数据失败!");
+            alert("Request failure!");
             myChart.hideLoading();
         }
     });
