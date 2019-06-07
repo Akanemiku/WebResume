@@ -3,18 +3,18 @@ jQuery(document).ready(function($) {
 
     $('#a').click(function(){
         $body.animate({scrollTop: $('#about').offset().top}, 1000);
-        return false;// 返回false可以避免在原链接后加上#
+        return false;
     });
     $('#b').click(function(){
         $body.animate({scrollTop: $('#grade').offset().top}, 1000);
-        return false;// 返回false可以避免在原链接后加上#
+        return false;
     });
     $('#c').click(function(){
         $body.animate({scrollTop: $('#gpa').offset().top}, 1000);
-        return false;// 返回false可以避免在原链接后加上#
+        return false;
     });
     $('#d').click(function(){
         $body.animate({scrollTop: $('#skills').offset().top}, 1000);
-        return false;// 返回false可以避免在原链接后加上#
+        return false;
     });
 });
